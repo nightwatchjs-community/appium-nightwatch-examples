@@ -1,0 +1,14 @@
+{
+  "name": "appium-nightwatch-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch --env appium_server"
+  },
+  "author": "Ravi Sawlani",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^2.0.0-alpha.4"
+  }
+}
