@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch --env appium_server"
+    "test": "nightwatch --env appium.ios"
   },
   "author": "Ravi Sawlani",
   "license": "ISC",
