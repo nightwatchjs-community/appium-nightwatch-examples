@@ -31,7 +31,7 @@ $ npm test
 
 ## Configuration
 
-We can add in a test setting in nightwatch config for appium server and then can extend for vairous desired target-devices/desired-capabilites to run on:
+We can add in a test setting in nightwatch config for appium server and then can extend for various desired target-devices/desired-capabilites to run on:
 
 ```js
 'appium': {
