@@ -1,11 +1,12 @@
 # Apppium-Nightwatch-Examples
 Appium is an open source tools that help you drive your mobile apps(native, hybrid, and mobile web). At a high-level appium works on client-server architecture. 
-Appium server is Node JS based web server that exposes REST APIs and bridges comamnd to native frameworks. This repo aims to show examples tests that can be eaisly writte
-
-
+Appium server is Node JS based web server that exposes REST APIs and bridges command to native frameworks.
 ## Overview
 The aim of the repo is to demonstrate features of Nightwatch which will be useful for writing testcases for mobile devices.
 
+## Demo
+
+![iPhone Nightwatch Session](.github/assets/demo.gif)
 
 ## Setup
 
@@ -30,7 +31,7 @@ $ npm test
 
 ## Configuration
 
-We can add in a test setting in nightwatch config for appium server and then can extend for vairous desired target/desired capabilites to run on:
+We can add in a test setting in nightwatch config for appium server and then can extend for vairous desired target-devices/desired-capabilites to run on:
 
 ```js
 'appium': {
@@ -62,4 +63,5 @@ We can add in a test setting in nightwatch config for appium server and then can
     },
 ```
 
-
+## Gestures
+ Gestures are commonly used while interacting with mobile devices. We can use non-standard APIs commands to generate gestures which would be specific to platform, commands like ` browser.execute('mobile: swipe', args);` to stimulate a swipe in iOS-specific platform. The other option is to use Actions API from Nightwatch that is based on W3C Webdriver Spec. Actions API is very general and is platform independent. It relies on the concept of input sources(key, pointer, wheel). You can refer [W3C spec](https://www.w3.org/TR/webdriver/#actions) for more details. The example test shows a sample swipe and zoom in using actions API.
