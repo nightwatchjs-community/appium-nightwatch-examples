@@ -20,13 +20,13 @@ module.exports = {
   page_objects_path: '',
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/#writing-custom-commands
-  custom_commands_path:  '',
+  custom_commands_path: '',
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/#writing-custom-assertions
   custom_assertions_path: '',
 
   // See https://nightwatchjs.org/guide/#external-globals
-  globals_path : '',
+  globals_path: '',
 
   webdriver: {},
 
@@ -42,7 +42,7 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'firefox'
+        browserName: 'firefox'
       },
 
       webdriver: {
@@ -52,8 +52,8 @@ module.exports = {
     },
 
     safari: {
-      desiredCapabilities : {
-        browserName : 'safari',
+      desiredCapabilities: {
+        browserName: 'safari',
         alwaysMatch: {
           acceptInsecureCerts: false
         }
@@ -65,8 +65,8 @@ module.exports = {
     },
 
     firefox: {
-      desiredCapabilities : {
-        browserName : 'firefox',
+      desiredCapabilities: {
+        browserName: 'firefox',
         alwaysMatch: {
           acceptInsecureCerts: true,
           'moz:firefoxOptions': {
@@ -89,9 +89,9 @@ module.exports = {
     },
 
     chrome: {
-      desiredCapabilities : {
-        browserName : 'chrome',
-        'goog:chromeOptions' : {
+      desiredCapabilities: {
+        browserName: 'chrome',
+        'goog:chromeOptions': {
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
           //
           // This tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
@@ -115,9 +115,9 @@ module.exports = {
     },
 
     edge: {
-      desiredCapabilities : {
-        browserName : 'MicrosoftEdge',
-        'ms:edgeOptions' : {
+      desiredCapabilities: {
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
           w3c: false,
           // More info on EdgeDriver: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/capabilities-edge-options
           args: [
@@ -153,9 +153,9 @@ module.exports = {
       // More info on configuring capabilities can be found on:
       // https://www.browserstack.com/automate/capabilities?tag=selenium-4
       desiredCapabilities: {
-        'bstack:options' : {
+        'bstack:options': {
           userName: '${BROWSERSTACK_USER}',
-          accessKey: '${BROWSERSTACK_KEY}',
+          accessKey: '${BROWSERSTACK_KEY}'
         }
       },
 
@@ -181,7 +181,7 @@ module.exports = {
       extends: 'browserstack',
       desiredCapabilities: {
         browserName: 'chrome',
-        chromeOptions : {
+        chromeOptions: {
           w3c: false
         }
       }
@@ -223,9 +223,9 @@ module.exports = {
       }
     },
 
-    'appium':{
-      selenium:{
-        host:'localhost',
+    'appium': {
+      selenium: {
+        host: 'localhost',
         port: 4723
       },
       disable_error_log: true,
@@ -236,11 +236,11 @@ module.exports = {
         },
         keep_alive: true,
         start_process: false
-      },
+      }
     },
     
     'appium.ios': {
-      extends:'appium',
+      extends: 'appium',
       desiredCapabilities: {
         browserName: 'Safari',
         javascriptEnabled: true,
@@ -272,7 +272,7 @@ module.exports = {
       extends: 'selenium_server',
       desiredCapabilities: {
         browserName: 'chrome',
-        chromeOptions : {
+        chromeOptions: {
           w3c: false
         }
       }
