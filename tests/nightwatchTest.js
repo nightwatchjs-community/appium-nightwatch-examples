@@ -1,9 +1,22 @@
 const Device = require('selenium-webdriver/lib/input').Pointer;
 describe('Nightwatch Website tests', function() {
  
-  it('Check verison of nightwatch ', function(){
-    browser.url('https://nightwatchjs.org')
-      .assert.attributeContains('#bd-versions', 'text', '1.7.11');
+  it('Searching the Rijksmuseum ', async function(){
+    browser.navigateTo('https://www.rijksmuseum.nl/en');
+    const cookieDialogVisible = await browser.isVisible({
+      selector: '.cookie-consent-bar-wrap',
+      suppressNotFoundErrors: true
+    });
+  
+    if (cookieDialogVisible) {
+      browser.click('.cookie-consent-bar-wrap button.link');
+    }
+    browser.pause(1000).click('a[aria-label="Search"]');
+
+    return browser.setValue('input.search-bar-input[type=text]', ['night watch'])
+      .click('button.button.search-bar-button')
+      .pause(1000)
+      .assert.containsText('.search-results', 'The Night Watch, Rembrandt van Rijn, 1642');
   });
 
   
